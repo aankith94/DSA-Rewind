@@ -57,7 +57,7 @@ int countPairs(vector<int> nums , int k) {
         if(mp.find(nums[i] - k) != mp.end()) {
             cnt += mp[k + nums[i]];  // add frequency of that complimented element
         }
-        if(k != 0 && mp.find(nums[i] + k) != mp.end()) {
+        if(k != 0 && mp.find(nums[i] + k) != mp.end()) {  // k = 0 double count occurs so k != 0
             cnt += mp[nums[i] + k];
         }
         
